@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Customerorderdet|Caramel creek</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="stylesheet" href="./site.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="main-header">
+        <nav>
+            <!---menu, logo-->
+            <img src="./images/PngItem_5337637.png" style="height:70px;">
+            <ul>
+
+                <li><a href="">Home</a></li>
+                <li><a href="https://owalacheryl.wixsite.com/my-site-1" target="_blank">Blog</a></li>
+                <li><a href="#me">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div style="width:1000px; margin-right:auto; margin-left:auto;">
+        <aside id="left-menu">
+            <img src="./images/PngItem_2115094.png" style="height:300px; width:250px;">
+            <header>
+                <h4 style="text-align:center;">Welcome to Creek Shop</h4>
+            </header>
+            <!-- <input type="search" class="searchbox" placeholder="search our store..." />
+            <input type="submit" value="Go!">
+            <ol>
+                <li><a href="./carameloverview.html">All caramel categories</a></li>
+                <li><a href="#prom">Weekly promotion</a></li>
+                <li><a href="./menu.html">Menu details</a></li>
+                <li><a href="./about.html">About us</a></li>
+
+            </ol> -->
+        </aside>
+        <main id="main">
+            <header>
+                <h1>Customer details</h1>
+            </header>
+
+            <form action="customerorderdet.html" method="POST" enctype="application/x-www-form-urlencoded">
+                <fieldset>
+                    <legend style="color:rgba(210, 180, 140, 0.849);">Contact Information</legend>
+                    <p>
+                        <label for="Name">Name:</label>
+                        <input type="text" required="" minlength="10" maxlength="60" name="customerName">
+                    </p>
+                    <p>
+                        <label for="Email">Email:</label>
+                        <input type="email" name="customerEmail">
+                    </p>
+                    <p>
+                        <label for="Contacts">Contacts:</label>
+                        <input type="tel" name="customerContacts" pattern="\(\d{3}\) \d{3}-\d{4}">
+                    </p>
+                    <p>Phone type:</p>
+                    Cell: <input type="radio" name="phonetype" value="cell">
+                    Work: <input type="radio" name="phonetype" value="work">
+                    Home: <input type="radio" name="phonetype" value="home">
+
+                    <input type="hidden" name="source" value="customerorderform" />
+                </fieldset> <br>
+                <fieldset>
+                    <legend style="color:rgba(210, 180, 140, 0.849);">Feedback</legend>
+                    <p>
+                        <textarea required name="feedback" cols="40" rows="4"></textarea>
+                    </p>
+                    <p>
+                        <label for="SeverityRange">SeverityRange:</label>
+                        <input type="range" name="SeverityRange">
+                    </p>
+                    <p>
+                        <label for="Severity">Severity:</label>
+                        <input type="number" min="3" max="15" name="severity">
+                    </p>
+                    <p><label for="Feedback">Feedback:</label></p>
+
+                    <select name="feedbacktype" multiple="multiple" size="4">
+                        <optgroup name="tech">
+                            <option value="Big Tech and Startups">Big Tech and Startups</option>
+                            <option value="Elon Musk">Elon Musk</option>
+                            <option value="Mark Zuckerbug">Mark Zuckerbug</option>
+                        </optgroup>
+                        <option value="webstore">webstore</option>
+                        <option value="Get a quote">Get a quote</option>
+
+                    </select>
+                    <p>
+                        <label for="IssueDate">IssueDate:</label>
+                        <input type="date" name="issueDate">
+                    </p>
+                    <p>
+                        <label for="IssueTime">IssueTime:</label>
+                        <input type="time" name="issueTime">
+                    </p>
+
+                </fieldset> <br>
+
+                <button type="submit">SendCustomerDetails</button>
+
+            </form>
+
+        </main>
+        <footer>
+            <p> Our address is <address>Store at Corporate Headquarters 646 McCorkle Blvd Westerville, Ohio 43082
+                </address>
+            </p>
+            <p id="me">Contact us via<a href="mailto:info@owalacheryl.com">Email</a></p>
+            <small>&copy;2021 Creeks caramel shop -All rights preserved</small>
+            <p><small> <a href="http://www.tanztechsolutions.tech/" style="color:teal;">created by
+                        tanztechsolutions</a></small></p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

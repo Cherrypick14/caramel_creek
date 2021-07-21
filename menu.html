@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Menu|Caramel creek</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1">
+    <link rel="stylesheet" href="./site.css" type="text/css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="main-header">
+        <nav>
+            <!---menu, logo-->
+            <img src="./images/PngItem_5337637.png" style="height:70px;">
+            <ul>
+
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="https://owalacheryl.wixsite.com/my-site-1" target="_blank">Blog</a></li>
+                <li><a href="#me">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <div style="width:1000px; margin-right:auto; margin-left:auto;">
+        <aside id="left-menu">
+            <img src="./images/PngItem_2115094.png" style="height:300px; width:250px;">
+            <header>
+                <h4 style="text-align:center;">Welcome to Creek Shop</h4>
+            </header>
+            <input type="search" class="searchbox" placeholder="search our store..." />
+            <input type="submit" value="Go!">
+            <ol>
+                <li><a href="./carameloverview.html">All caramel categories</a></li>
+                <li><a href="">Menu details</a></li>
+                <li><a href="./about.html">About us</a></li>
+
+            </ol>
+        </aside>
+        <main id="main">
+            <article>
+
+                <header>
+                    <h1 style="font-size:40px; color:tan"> What you order will be served!!!.</h1>
+                </header>
+                <section>
+                    <div class="wrapper">
+                        <div class="iced-car" id="#stbucks">
+                            <img src="./images/starbucks-iced-caramel-macchiato-recipe.jpg" />
+                            <div>
+                                <p class="title">Starbucks-iced caramel</p>
+                                <p class="price">Price:$7.50</p>
+                            </div>
+                            <button data-order="starbucks">order</button>
+                        </div>
+                        <div class="iced-car" id="#thai">
+                            <img src="./images/macchiatoo.jpg" />
+                            <div>
+                                <p class="title">Thailand iced machiatto</p>
+                                <p class="price">Price:$5.50</p>
+                            </div>
+                            <button data-order="thailand">order</button>
+                        </div>
+
+                    </div>
+                    <div class="sec2" style="margin-top: 20px;">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque esse iusto nulla porro enim
+                            sapiente unde facere consectetur libero, est alias aliquam earum ipsam officia beatae
+                            architecto similique, voluptate repellat.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat excepturi harum, quas
+                            temporibus alias hic dolorem eum et magnam nemo tempora quo unde autem eos eveniet, animi
+                            numquam dolor nobis?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias iure officiis nobis
+                            error, eaque nemo eius commodi minima exercitationem neque aliquid? Consequuntur consequatur
+                            voluptatibus quaerat, a vel dolorum. Natus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo praesentium soluta voluptate
+                            placeat, doloremque expedita, laudantium consectetur magni quibusdam quos quidem illo quam
+                            aperiam assumenda labore! Suscipit nobis repudiandae molestias!
+                        </p>
+                    </div>
+
+
+
+                </section>
+            </article>
+        </main>
+        <footer>
+            <p> Our address is <address>Store at Corporate Headquarters 646 McCorkle Blvd Westerville, Ohio 43082
+                </address>
+            </p>
+            <p id="me">Contact us via<a href="mailto:info@owalacheryl.com">Email</a></p>
+            <small>&copy;2021 Creeks caramel shop -All rights preserved</small>
+            <p><small> <a href="http://www.tanztechsolutions.tech/" style="color:teal;">created by
+                        tanztechsolutions</a></small></p>
+        </footer>
+    </div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function (e) {
+        const orderButton = document.querySelectorAll("button[data-order]");
+        orderButton.forEach(function (button) {
+            button.addEventListener("click", function (e) {
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const order = {
+                    id: button.getAttribute("data-order"),
+                    title: container.querySelector(".title").innerText,
+                    price: container.querySelector(".price").innerText
+                };
+                localStorage.setItem("order", JSON.stringify(order));
+                const url = window.location.href.replace("menu.html", "customerorderdet.html");
+                window.location.href = url;
+            });
+
+        });
+
+
+    });
+</script>
+
+</html>
